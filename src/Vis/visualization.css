@@ -1,0 +1,29 @@
+.replica-node circle {
+    stroke: #fa2d2d;
+    stroke-width: .2;
+}
+
+line {
+    stroke: aliceblue;
+    stroke-width: .2;
+}
+
+.svg-phase-Pre-Prepare {
+    fill: rgb(255, 97, 6)
+}
+
+.svg-phase-Prepare {
+    fill: rgb(92, 15, 72)
+}
+
+.svg-phase-Commit {
+    fill: rgb(10, 131, 20) 
+}
+
+.svg-phase-New-Txns {
+    fill: rgb(51, 184, 232)
+}
+
+.svg-phase-Response {
+    fill: rgb(248, 74, 205) 
+}
