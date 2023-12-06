@@ -3,10 +3,11 @@ import { ReplicaNodeCircle } from './ReplicaNodeCircle';
 let client_x = 10
 let client_y = 25
 let replicas_start_x = 90
-let replicas_start_y = 10
-let radius = 3;
-export let ClientToReplicasView = ( {numberOfReplicas} ) => {
+let replicas_start_y = 5
 
+export let ClientToReplicasView = ( {numberOfReplicas, primary} ) => {
+    let radius = 21/(2*(numberOfReplicas-1))
+    let node_spacing = 2*radius + (19/(numberOfReplicas-1))
     return(
         <g className='replica-node'>
             <ReplicaNodeCircle centerXCord={client_x} 
@@ -15,10 +16,16 @@ export let ClientToReplicasView = ( {numberOfReplicas} ) => {
                 nodeName='C'/>
 
             {[...Array(numberOfReplicas)].map((x,i) =>
-                <ReplicaNodeCircle centerXCord={replicas_start_x}
-                    centerYCord={replicas_start_y+i*3*radius}
+                i+1 === primary ? <ReplicaNodeCircle centerXCord={replicas_start_x}
+                    centerYCord={replicas_start_y+i*node_spacing}
                     radius={radius}
-                    nodeName={`R${i}`}/>
+                    nodeName={`R${i}`}
+                    primary={true}/> :
+                    <ReplicaNodeCircle centerXCord={replicas_start_x}
+                    centerYCord={replicas_start_y+i*node_spacing}
+                    radius={radius}
+                    nodeName={`R${i}`}
+                    primary={false}/>
             )}
         </g>
     )

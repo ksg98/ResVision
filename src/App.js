@@ -3,7 +3,7 @@ import React from 'react';
 import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';
 import { CTA, Brand, Navbar } from './components';
 //import Vis from './Vis/Vis'
-import Vis from './Visual/Vis'
+import Vis from './Vis/Vis';
 
 import './App.css';
 
@@ -20,9 +20,9 @@ const App = () => (
     
     {/* <Possibility /> */}
     <Vis/>
-    <CTA />
+    {/* <CTA /> */}
     {/* <Blog /> */}
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

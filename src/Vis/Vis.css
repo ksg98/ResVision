@@ -1,5 +1,9 @@
 .Vis {
-  background-color: #282c34;
+  background-color: var(--color-footer);
+  margin: 100px;
+  margin-top: 40px;
+  padding-top: 1px;
+
 }
 
 .Vis-logo {
@@ -14,23 +18,25 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .Vis-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: Vis-logo-spin infinite 20s linear;
   }
 }
 
 .Vis-header {
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif;
 }
 
 .Vis-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes Vis-logo-spin {
   from {
     transform: rotate(0deg);
   }
