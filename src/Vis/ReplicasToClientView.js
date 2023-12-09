@@ -3,11 +3,11 @@ import { ReplicaNodeCircle } from './ReplicaNodeCircle';
 let client_x = 90
 let client_y = 25
 let replicas_start_x = 10
-let replicas_start_y = 5
+let replicas_start_y = 8
 
 export let ReplicasToClientView = ( {numberOfReplicas, primary} ) => {
     let radius = 21/(2*(numberOfReplicas-1))
-    let node_spacing = 2*radius + (19/(numberOfReplicas-1))
+    let node_spacing = 2*radius + (13/(numberOfReplicas-1))
     return(
         <g className='replica-node'>
             <ReplicaNodeCircle centerXCord={client_x} 

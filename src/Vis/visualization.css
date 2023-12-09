@@ -44,11 +44,11 @@ line {
 }
 
 .svg-phase-New-Txns {
-    fill: rgb(51, 184, 232)
+    fill: #176AC5
 }
 
 .svg-phase-Response {
-    fill: rgb(248, 74, 205) 
+    fill: #042C54 
 }
 .svg-phase-View-Change-Request {
     fill: rgb(255, 0, 0) 
