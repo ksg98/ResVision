@@ -58,11 +58,11 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
         <>
             <form className="request-form">
                 <label className='vis-label'>
-                    Key:
+                    Key
                     <input type="text" className='vis-input' value={requestKey} onChange={updateRequestKey}></input>
                 </label>
                 <label className='vis-label'>
-                    Value:
+                    Value
                     <input type="text" className='vis-input' value={requestValue} onChange={updateRequestValue}></input>
                 </label>
                 <button type='submit' className='vis-send-button' onClick={sendClientRequest}>Send</button>

@@ -1,7 +1,7 @@
 import './visualization.css';
 
 export let ReplicaNodeCircle = ({ centerXCord, centerYCord, radius, nodeName, primary }) => {
-    let fillColor = 'white'
+    let fillColor = '#ffd9a0'
     if( primary === true ) {
         fillColor = '#ffff00'
     }

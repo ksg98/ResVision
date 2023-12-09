@@ -1,9 +1,12 @@
 .Vis {
-  background-color: var(--color-footer);
+  background: var(--color-footer);
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 10% 50%, #042c54 5%, rgba(4, 44, 84, 1) 92%, rgba(27, 120, 222, 1) 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin: 100px;
   margin-top: 40px;
   padding-top: 1px;
-
+  align-items: center;
 }
 
 .Vis-logo {
@@ -27,9 +30,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-  font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+  font-family: var(--font-family);
+  font-weight: 800;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Vis-link {

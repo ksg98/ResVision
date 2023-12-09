@@ -1,20 +1,42 @@
+@keyframes draw {
+    to {
+      stroke-dashoffset: 0; /* Animate drawing the line */
+    }
+}
+  
+:root {
+    --gradient-text2: linear-gradient(59.97deg, #6d28b7 1.84%, #ffa270 112.67%);
+}
+.vis-svg-graph {
+    margin: 30px;
+    background: var(--gradient-text2);
+    border: 3px solid white;
+    border-radius: 100px;
+    margin: 50px;
+    box-shadow: 4px 4px 4px #145ea7;
+}
 .replica-node circle {
-    stroke: #FFCC11;
-    stroke-width: .2;
     animation: pulse 1.5s infinite;
+    + text {
+        font-family: var(--font-family);
+    }
 }
 
 line {
-    stroke: aliceblue;
-    stroke-width: .2;
+    stroke: #042C54;
+    stroke-width: .1;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 20s linear forwards;
 }
 
 .svg-phase-Pre-Prepare {
     fill: rgb(255, 189, 6)
 }
 
-.svg-phase-Prepare {
-    fill: rgb(255, 126, 20)
+.svg-phase-Prepare ellipse {
+    fill: rgb(255, 126, 20);
 }
 
 .svg-phase-Commit {
@@ -35,5 +57,5 @@ line {
     fill: rgb(247, 0, 185) 
 }
 .primary-node {
-    fill:#ffff00
+    fill:#ffd9a0
 }

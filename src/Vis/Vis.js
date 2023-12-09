@@ -5,11 +5,9 @@ import {MyRootComponent} from './MyRootComponent'
 function Vis() {
   return (
     <div className="Vis">
-      <header className="Vis-header">
-        <p>
+      <h1 className="Vis-header">
           BFT Protocols Visualization
-        </p>
-      </header>
+      </h1>
       <MyRootComponent/>
     </div>
   );

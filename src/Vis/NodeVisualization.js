@@ -30,13 +30,14 @@ export let NodeVisualization = ( {view, numberOfReplicas, primary} ) => {
           });
     }
     return (
-        <svg viewBox='0 0 100 50' style={{
-            border: "2px solid gold",
-            margin: '30px'}}
-            id='vis-svg'
-            ref={inputRef}>
-                { showView(view)  }
-            
-        </svg>
+
+            <svg viewBox='0 0 100 50' 
+                id='vis-svg'
+                className='vis-svg-graph'
+                ref={inputRef}>
+                    { showView(view)  }
+                
+            </svg>
+
     )
 }

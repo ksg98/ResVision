@@ -1,5 +1,12 @@
+:root {
+    --gradient-text3: linear-gradient(59.97deg, #d4b3f8 1.84%, #fdb995 12.67%);
+}
+
 .request-form {
-    color: white
+    color: white;
+    align-items: center;
+    margin-left: 450px;
+    margin-top: 50px;
 }
 
 .request-form label,button {
@@ -12,22 +19,32 @@
 
 .vis-send-button {
     display: block;
-    background-color: rgb(81, 81, 0);
+    background-color: #6031FF;
     color: white;
     font-size: 17px;
     padding: 10px 30px;
-    border-radius: 5px;
-    margin: 10px 125px;
+    border-radius: 25px;
+    border: none;
+    margin: 10px 150px;
     cursor: pointer;
+    font-family: var(--font-family);
 }
-
+.vis-send-button:hover {
+    background-color: #AE67FA;
+}
 .vis-input {
     width: 10%;
     padding: 10px;
+    outline: none;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 0px solid #ccc;
+    border-radius: 25px;
     font-size: 16px;
+    -webkit-text-fill-color: black;
+    background: linear-gradient(to right, #e1b7f1, #f3bab4);
+}
+.vis-input:focus {
+    outline: none;
 }
 
 .vis-label {
@@ -35,8 +52,12 @@
     margin-bottom: 8px;
     font-weight: bold;
     color: #ffffff;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-family: var(--font-family);
     font-size: 18px;
+    background: var(--gradient-text3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .alert {
