@@ -68,7 +68,7 @@ let dummyConsensusData = {
         ]
 }
 let xStart = 10;
-let yStart = 5;
+let yStart = 8;
 let vis_time = 1500;
 export let MyRootComponent = () => {
     let prevConsensusData;
@@ -142,7 +142,7 @@ let showReplicaToReplicaCommunication = ( fromNodes, toNodes, phaseName, numberO
                         .duration(vis_time)
                         .ease(d3.easeLinear)
                         .attr('x', 100-xStart-radius - 3 )
-                        .attr('y', toNodeStartCoord_Y + ((toNodes[j]-1)*(2*radius + (19/(numberOfReplicas-1)))) - 1.5)
+                        .attr('y', toNodeStartCoord_Y + ((toNodes[j]-1)*(2*radius + (13/(numberOfReplicas-1)))) - 1.5)
                         .transition()
                         .duration(100)
                         .remove()
@@ -210,7 +210,7 @@ let showClientToReplicasCommunication = ( fromNodes, toNodes, phaseName, numberO
                         .duration(vis_time)
                         .ease(d3.easeLinear)
                         .attr('x', 100-xStart-radius - 3 )
-                        .attr('y', toNodeStartCoord_Y + ((toNodes[j]-1)*(2*radius + (19/(numberOfReplicas-1)))) - 1.5)
+                        .attr('y', toNodeStartCoord_Y + ((toNodes[j]-1)*(2*radius + (13/(numberOfReplicas-1)))) - 1.5)
                         .transition()
                         .duration(100)
                         .remove()
@@ -310,13 +310,13 @@ let showCommunicationLines = ( svgSelector, fromNodes, toNodes, from_x, from_y, 
     let radius = 21/(2*(numberOfReplicas-1));
 
     for( let i=0; i < fromNodes.length; i++ ) {
-        from_y_start = from_y + ((fromNodes[i]-1)%4)*(2*radius + (19/(numberOfReplicas-1)));
+        from_y_start = from_y + ((fromNodes[i]-1)%4)*(2*radius + (13/(numberOfReplicas-1)));
         for( let j=0; j < toNodes.length; j++ ) {
             svgSelector.append( 'line' )
                     .attr('x1', from_x+0.5)
                     .attr('y1', from_y_start)
                     .attr('x2', to_x-0.5)
-                    .attr('y2', to_y + (((toNodes[j]-1)%4)*(2*radius + (19/(numberOfReplicas-1)))) )
+                    .attr('y2', to_y + (((toNodes[j]-1)%4)*(2*radius + (13/(numberOfReplicas-1)))) )
             svgSelector.append( 'image' )
                     .attr( 'id', `line_${fromNodes[i]}${toNodes[j]}`)
                     .attr( 'href', msgSVG )
