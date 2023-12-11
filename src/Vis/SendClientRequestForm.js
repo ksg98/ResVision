@@ -60,13 +60,16 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
                     },
                     body: JSON.stringify(keyValueData)
                 }
-                let url = 'http://34.171.249.215:3000/execute-command';
-                const delay = await new Promise(resolve => setTimeout(resolve, 2000));
-                response = Promise.resolve(received_data);
-                console.log(response)
+                let url = 'http://35.236.46.255:3000/execute-command';
+                response = await fetch(url, options );
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
+                const delay = await new Promise(resolve => setTimeout(resolve, 2000));
+                setShowAlert(false);
+                response = Promise.resolve(received_data);
+                console.log(response)
+                
                 const data = await response.json();
                 console.log(data)
                 return(data);
