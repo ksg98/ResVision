@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './form.css'
 import {dummyPBFTConsensusData, dummyPBFTConsensusData2, dummyViewChangeData} from './dummyConsensusData'
+import received_data from './received_data'
 
 export let SendClientRequestFrom = ( {startVisualization} ) => {
     let [ requestKey, setRequestKey ] = useState( '' );
@@ -60,8 +61,9 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
                     body: JSON.stringify(keyValueData)
                 }
                 let url = 'http://34.171.249.215:3000/execute-command';
-                response = await fetch(url, options );
-                //console.log(jsonData)
+                const delay = await new Promise(resolve => setTimeout(resolve, 2000));
+                response = Promise.resolve(received_data);
+                console.log(response)
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

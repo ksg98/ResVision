@@ -5,68 +5,6 @@ import * as d3 from 'd3'
 import { useEffect, useRef } from 'react';
 import msgSVG from './message.svg'
 
-let dummyConsensusData = {
-    primary_id: 1,
-    numberOfReplicas: 4,
-    phases: 
-        [
-            {
-                phase: "New-Txns",
-                senders: [5],
-                receivers: [1]
-            },
-            {
-                phase: "Pre-Prepare",
-                senders: [1],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Prepare",
-                senders: [1],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Prepare",
-                senders: [2],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Prepare",
-                senders: [3],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Prepare",
-                senders: [4],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Commit",
-                senders: [1],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Commit",
-                senders: [2],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Commit",
-                senders: [3],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Commit",
-                senders: [4],
-                receivers: [1,2,3,4]
-            },
-            {
-                phase: "Response",
-                senders: [1,2,3,4],
-                receivers: [5]
-            }
-        ]
-}
 let xStart = 10;
 let yStart = 8;
 let vis_time = 1500;
