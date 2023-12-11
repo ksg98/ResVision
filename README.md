@@ -1,4 +1,4 @@
-###FrontEnd Setup Instructions
+## FrontEnd Setup Instructions
 
 To Run the app locally on your machine : 
 
@@ -10,7 +10,7 @@ To Run the app locally on your machine :
      i.e. Key = name and  Value = vc (in place of vc you can input "pbft" or "fbft")
 6) Click the send button to run the BFT visualizations
 
-###Backend Setup Instructions
+## Backend Setup Instructions
 
 Follow these steps to set up the backend for your project. Ensure you have the necessary prerequisites installed on your system before proceeding.
 
