@@ -15,9 +15,9 @@ const Navbar = () => {
         <div className="gpt3__navbar-links_container">
           <p><a href="#home">Home</a></p>
           <p><a href="#wgpt3">What is BFT</a></p>
-          <p><a href="#possibility">PBFT</a></p>
-          <p><a href="#features">Visualization</a></p>
-          <p><a href="#blog">Contribution</a></p>
+          {/* <p><a href="#possibility">PBFT</a></p> */}
+          <p><a href="#features">Stages of PBFT</a></p>
+          <p><a href="#Vis">Visualization</a></p>
         </div>
       </div>
       <div className="gpt3__navbar-sign">
@@ -33,8 +33,8 @@ const Navbar = () => {
           <div className="gpt3__navbar-menu_container-links">
           <p><a href="#home">Home</a></p>
           <p><a href="#wgpt3">What is BFT</a></p>
-          <p><a href="#possibility">PBFT</a></p>
-          <p><a href="#features">Visualization</a></p>
+          {/* <p><a href="#possibility">PBFT</a></p> */}
+          <p><a href="#features">Stages of PBFT</a></p>
           <p><a href="#blog">Contribution</a></p>
           </div>
           <div className="gpt3__navbar-menu_container-links-sign">
