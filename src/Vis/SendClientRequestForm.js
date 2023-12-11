@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './form.css'
+import {dummyPBFTConsensusData, dummyPBFTConsensusData2, dummyViewChangeData} from './dummyConsensusData'
 
 export let SendClientRequestFrom = ( {startVisualization} ) => {
     let [ requestKey, setRequestKey ] = useState( '' );
@@ -29,28 +30,48 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
     }
 
     const getConsensusData = async ( keyValueData ) => {
-        try {
-          const options = {
-            //method: 'POST',
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            //body: JSON.stringify(keyValueData)
-          }
-          let url = `http://localhost:8080/api/data?key=${keyValueData.key}&value=${keyValueData.value}`
-          const response = await fetch(url, options );
-          const delay = await new Promise(resolve => setTimeout(resolve, 2000));
-          setShowAlert(false);
-          //console.log(jsonData)
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const data = await response.json();
-          console.log(data)
-          return(data);
-        } catch (error) {
-          console.error('Error:', error);
+        let response = {}
+        if( keyValueData.key === '' ) {
+            switch ( keyValueData.value.toLowerCase() ) {
+                case 'pbft':
+                    response = Promise.resolve( dummyPBFTConsensusData )
+                    break;
+                case 'fbft':
+                    response = Promise.resolve( dummyPBFTConsensusData2 )
+                    break;
+                case 'vc':
+                    response = Promise.resolve( dummyViewChangeData )
+                    break;
+                default:
+                    response = Promise.resolve( dummyPBFTConsensusData )
+                    break;
+            }
+            const delay = await new Promise(resolve => setTimeout(resolve, 2000));
+            setShowAlert(false);
+            return(response)
+        }
+        else {
+            try {
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(keyValueData)
+                }
+                let url = 'http://34.171.249.215:3000/execute-command';
+                response = await fetch(url, options );
+                //console.log(jsonData)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log(data)
+                return(data);
+            }
+            catch (error) {
+            console.error('Error:', error);
+            }
         }
       }
 
