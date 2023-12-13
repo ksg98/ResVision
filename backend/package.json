@@ -1,0 +1,16 @@
+{
+  "name": "resvision-backend",
+  "version": "1.0.0",
+  "description": "The Complete end to end backend for resVision",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karamjeet, Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ws": "^8.15.0"
+  }
+}

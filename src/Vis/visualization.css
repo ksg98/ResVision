@@ -10,10 +10,11 @@
 .vis-svg-graph {
     margin: 30px;
     background: var(--gradient-text2);
-    border: 3px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
     border-radius: 100px;
     margin: 50px;
-    box-shadow: 4px 4px 4px #145ea7;
+    box-shadow: 4px 4px 4px #3286db;
 }
 .replica-node circle {
     animation: pulse 1.5s infinite;

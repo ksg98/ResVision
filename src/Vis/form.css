@@ -5,8 +5,8 @@
 .request-form {
     color: white;
     align-items: center;
-    margin-left: 450px;
-    margin-top: 50px;
+    margin-left: 350px;
+    margin-top: 20px;
 }
 
 .request-form label,button {
@@ -18,14 +18,14 @@
 }
 
 .vis-send-button {
-    display: block;
+    display: inline;
     background-color: #6031FF;
     color: white;
     font-size: 17px;
     padding: 10px 30px;
     border-radius: 25px;
     border: none;
-    margin: 10px 150px;
+    margin: 10px 75px;
     cursor: pointer;
     font-family: var(--font-family);
 }
