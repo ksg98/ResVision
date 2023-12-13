@@ -69,10 +69,7 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
                 setShowAlert(false);
                 response = Promise.resolve(received_data);
                 console.log(response)
-                
-                const data = await response.json();
-                console.log(data)
-                return(data);
+                return(response);
             }
             catch (error) {
             console.error('Error:', error);
