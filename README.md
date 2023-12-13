@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+## FrontEnd Setup Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To Run the app locally on your machine : 
 
-## Available Scripts
+1) Clone or Download the code from GitHub link https://github.com/Divyanshumalik1/ResVision
+2) Install dependencies: 
+	`npm update`
+3) To run the web app: 
+	`npm run start`
+4) The project will start after building up and you can open it on this link on your computer locally: 
+	`http://localhost:3000`
+5) In the file to run the PBFT visualization write "" in the "KEY" section and "Value" can take multiple entries such as {vc, pbft, fbft}
+     i.e. Key is empty and  Value = vc (in place of vc you can input "pbft" or "fbft")
+6) Click the send button to run the BFT visualizations
 
-In the project directory, you can run:
+## Backend Setup Instructions
 
-### `npm start`
+Follow these steps to set up the backend for your project. Ensure you have the necessary prerequisites installed on your system before proceeding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Setting Up the KV Server
+Modify Consensus Manager:
+Navigate to the resilient/platform/consensus/ordering/pbft directory.
+In this directory, locate and open the consensus_manager.cpp file.
+Uncomment the sender ID logs in the commit method.
+Start the KV Server:
+After making the above changes, you can start the KV server. Ensure that all configurations are correctly set before starting the server.
+Clone the required directory into the resilientdb directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Python Setup
+Install Regex:
+Make sure you have Python3 installed on your system.
+Install the regex package using pip: pip3 install regex   
+		Run the Parser:
+Once the regex package is installed, you can run the parser script: python3 parser.py   
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+WebSocket and Express Backend
+Install Node.js and npm:
+If not already installed, install Node.js and npm on your system. You can download them from Node.js official website.
+Install Dependencies:
+Navigate to the directory containing your package.json file.
+Run the following command to install all necessary dependencies: npm install   
+		
+Start the Backend Application:
+Once all dependencies are installed, start the application using: node app.js   
+This will start the backend engine, and your application should now be running.
