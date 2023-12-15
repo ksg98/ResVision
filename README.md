@@ -1,3 +1,4 @@
+## GCP deployed link : http://35.236.46.255:3001/
 ## Deployed Website Link : https://resvision.wl.r.appspot.com/
 
 ## FrontEnd Setup Instructions
