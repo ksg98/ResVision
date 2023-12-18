@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const fs = require('fs');
 
 const ws = new WebSocket('ws://35.236.46.255:8080');
-const filePath = 'src/Vis/received_data.json';
+const filePath = 'received_data.json';
 
 ws.on('open', function open() {
     console.log('Connected to the server');
