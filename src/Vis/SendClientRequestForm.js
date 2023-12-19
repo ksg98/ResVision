@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './form.css'
 import {dummyPBFTConsensusData, dummyPBFTConsensusData2, dummyViewChangeData} from './dummyConsensusData'
 import received_data from './received_data'
+import { color } from 'd3';
 
 export let SendClientRequestFrom = ( {startVisualization} ) => {
     let [ requestKey, setRequestKey ] = useState( '' );
@@ -32,15 +33,15 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
 
     const getConsensusData = async ( keyValueData ) => {
         let response = {}
-        if( keyValueData.key === '' ) {
+        if( keyValueData.key === '00000000' ) {
             switch ( keyValueData.value.toLowerCase() ) {
-                case 'pbft':
+                case '-1':
                     response = Promise.resolve( dummyPBFTConsensusData )
                     break;
-                case 'fbft':
+                case '-2':
                     response = Promise.resolve( dummyPBFTConsensusData2 )
                     break;
-                case 'vc':
+                case '-3':
                     response = Promise.resolve( dummyViewChangeData )
                     break;
                 default:
@@ -79,14 +80,17 @@ export let SendClientRequestFrom = ( {startVisualization} ) => {
 
     return (
         <>
+            <h2 className='vis-txn-banner'>
+                Send   Transaction
+            </h2>
             <form className="request-form">
                 <label className='vis-label'>
-                    Key
-                    <input type="text" className='vis-input' value={requestKey} onChange={updateRequestKey}></input>
+                    Receiver Account ID
+                    <input type="number" className='vis-input' value={requestKey} onChange={updateRequestKey}></input>
                 </label>
                 <label className='vis-label'>
-                    Value
-                    <input type="text" className='vis-input' value={requestValue} onChange={updateRequestValue}></input>
+                    Amount
+                    <input type="number" className='vis-input' value={requestValue} onChange={updateRequestValue}></input>
                 </label>
                 <button type='submit' className='vis-send-button' onClick={sendClientRequest}>Send</button>
             </form>

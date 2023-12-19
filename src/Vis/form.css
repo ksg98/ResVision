@@ -5,7 +5,7 @@
 .request-form {
     color: white;
     align-items: center;
-    margin-left: 350px;
+    margin-left: 110px;
     margin-top: 20px;
 }
 
@@ -33,8 +33,8 @@
     background-color: #AE67FA;
 }
 .vis-input {
-    width: 10%;
-    padding: 10px;
+    width: 20%;
+    padding: 15px;
     outline: none;
     margin-bottom: 15px;
     border: 0px solid #ccc;
@@ -72,4 +72,19 @@
     border: 1px solid #f5c6cb;
     border-radius: 5px;
     margin: 20px 125px;
+  }
+
+  .vis-txn-banner {
+    color: #8B41A8;
+    margin-left: 300px;
+    background-color: #E68D7C;
+    padding-left: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-bottom: 50px;
+    font-family: var(--font-family);
+    -webkit-text-fill-color: black;
+    background: linear-gradient(to right, #dc9cf6, #f3bab4);
   }
