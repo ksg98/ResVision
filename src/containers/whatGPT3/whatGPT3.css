@@ -27,9 +27,12 @@
     display: flex;
 }
 
+
+
 /* Customizing feature component as per needs */
 .gpt3__whatgpt3-feature .gpt3__features-container__feature {
     margin: 0;
+    margin-bottom: 20px;
 }
 
 /* Customizing feature component as per needs */
