@@ -6,8 +6,13 @@ import Blockchain from '../../assets/Blockchain';
 const WhatGPT3 = () => (
   <div className="gpt3__whatgpt3 section__margin" id="wgpt3">
     <div className="gpt3__whatgpt3-feature">
+      <Feature title="What is ResilientDB ?" text="ResilientDB is a blockchain fabric tailored for research and education, enabling exploration and experimentation with blockchain technologies. It supports a variety of consensus mechanisms, making it a versatile tool for studying different blockchain protocols and applications. Designed with a focus on scalability and performance, ResilientDB offers a customizable and extensible environment ideal for researchers and students keen on delving into the intricacies and potential of blockchain systems." />
+    </div>
+
+    <div className="gpt3__whatgpt3-feature">
       <Feature title="What is BFT ?" text="A Byzantine fault (also Byzantine generals problem, interactive consistency, source congruency, error avalanche, Byzantine agreement problem, and Byzantine failure) is a condition of a computer system, particularly distributed computing systems, where components may fail and there is imperfect information on whether a component has failed. The term takes its name from an allegory, the Byzantine generals problem, developed to describe a situation in which, to avoid catastrophic failure of the system, the system's actors must agree on a concerted strategy , but some of these actors are unreliable." />
     </div>
+
     <div className="gpt3__whatgpt3-heading">
       <h1 className="gradient__text">The possibilities are beyond your imagination</h1>
       {/* <p>Explore the Library</p> */}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../logo.svg';
 import './navbar.css';
+import Resilientdb from '../../assets/Resilientdb.svg'
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -14,11 +15,15 @@ const Navbar = () => {
         </div>
         <div className="gpt3__navbar-links_container">
           <p><a href="#home">Home</a></p>
-          <p><a href="#wgpt3">What is BFT</a></p>
+          <p><a href="#wgpt3">ResilientDB & BFT</a></p>
           {/* <p><a href="#possibility">PBFT</a></p> */}
           <p><a href="#features">Stages of PBFT</a></p>
           <p><a href="#Vis">Visualization</a></p>
         </div>
+        <div className='gpt3__navbar-links_RDB'>
+          <img src={Resilientdb}/>
+        </div>
+
       </div>
       <div className="gpt3__navbar-sign">
         {/* <p>Sign in</p>
